@@ -2,36 +2,47 @@
 layout: default
 title: Home
 ---
+<head>
+  <link href="images/fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="images/fontawesome/css/brands.css" rel="stylesheet">
+  <link href="images/fontawesome/css/solid.css" rel="stylesheet">
+</head>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | absolute_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<style type="text/css">
+  .fab {
+    color: black;
+  }
+  .fas {
+    color: black;
+  }
+ .grid {
+  grid-template-columns: 1fr 2fr;
+  display: flex;
+ }
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ '/' | absolute_url }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ paginator.previous_page_path | absolute_url }}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
+  </style>
+<div class="grid">
+    <div class="col-1-2" style="width: 30%;">
+      <img src="images/me.jpg"
+         alt="me_irl"
+         style="width: 65%;" />
+      <h2 style="margin-bottom: 1em;">
+        <span>Eric Tang</span>
+        <div>
+          <a href="erictang000@berkeley.edu"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/erictang000"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.github.com/erictang000"><i class="fab fa-github"></i></a>
+          <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+          <a href="images/EricTangResume.pdf"><i class="fas fa-file"></i></a>
+        </div>
+      </h2>
+    </div>
+    <div class="col-1-2" style="width:70%; font-size: 17px;">
+      <p>Hi! I'm a rising senior at UC Berkeley studying EECS. 
+        <!-- In my free time, I also work as the co-lead infrastructure TA for CS 61B, work on research in physics with the Crommie Group, and in machine learning with PhD student Dan Hendrycks. -->
+      </p>
+      <p>
+      This site will host some of the teaching resources for 61B I've compiled over the last 4 semesters, some course and personal projects that I thought were cool, and hopefully some blog posts about what I've been reading/thinking about.
+      </p>
+    </div>
 </div>
