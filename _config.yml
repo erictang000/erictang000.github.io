@@ -1,9 +1,9 @@
-# Setup
+#setup
 title:               Eric Tang
 tagline:             ''
 description:         'Site for things'
-url:                 http://erictang000.github.io
-baseurl:             ''
+url:                 
+baseurl:             / 
 paginate:            5
 permalink:           pretty
 
