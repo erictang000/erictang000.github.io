@@ -1,7 +1,7 @@
 #setup
 title:               Eric Tang
 tagline:             ''
-description:         'Site for things'
+description:         'personal website'
 url:                 
 baseurl:             / 
 paginate:            5
