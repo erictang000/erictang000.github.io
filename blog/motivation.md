@@ -1,0 +1,12 @@
+---
+layout: post
+title: Motivation
+---
+## Work in Progress
+<!-- 
+## On Motivation
+How do people motivate themselves? Maybe there are the select few for which motivation is intrinsic -- I'm listening to 'The Making of the Atomic Bomb' right now, and many of the super smart physicists who worked on early atomic and nuclear physics would certainly count among those for whom it seemed like passion for a subject and enjoyment of the process was the primary motivating factor. But for most of us, motivation is something more fleeting -- maybe we worked really well for a few hours one time but can't get that feeling back, or we felt like there was a longer period where we had it but then we lost it. We read self help books, try imitating people who we think are more successful than us, or using productivity hacks we read online. 
+
+The reality of motivation, at least in my own experience, is that it's largely been based on competition. The closer you are to the people who you are competing with, the easier it is to motivate yourself. Maybe this is unhealthy - but for me it's been true. I felt a lot more motivated to study for the Chem Olympiad in high school when I felt like I had something to prove to my friend who also started working on cracking the test. At my internship last summer, there wasn't really a sense that either me or the other intern were working very hard on the project - we were both doing other things, and had a sort of mutual understanding that we were mailing it in a little. I tried a lot harder in 61A than in my other classes -- probably because I wanted to prove that I could outwork and outperform everyone else in my CS classes, and no one else was really in my 53 and 7a classes, and so those didn't work. Life as a competition can be exhausting, and it would be great to just have the passion to do the things that I love and to spend all of my time doing those things. But in reality, if you don't feel uncomfortable where you are, or feel strongly that there's somewhere you want to be that you aren't, it's very hard to get yourself off your ass, and to go anywhere in an upward direction.
+
+Telling yourself that imposter syndrome exists is good sometimes, especially if you feel like complete shit about something, but getting too comfortable not really doing anything can be debilitating for growth. You need to feel like there's something to lose if you don't perform, otherwise the stakes won't always feel high enough until it's too late.  -->
