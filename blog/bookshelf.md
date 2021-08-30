@@ -27,3 +27,4 @@ Read more books in the last 2 months than I have in a long time - keeping track 
 * The Intelligent Investor - Benjamin Graham
 * Zen and the Art of Motorcycle Maintainance - Robert Pirsig
 * Catch-22 - Joseph Heller
+* Infinite Jest - David Foster Wallace
