@@ -3,6 +3,7 @@ title:               Eric Tang
 tagline:             ''
 description:         'personal website'
 url:                 
+markdown: kramdown
 baseurl:             / 
 paginate:            5
 permalink:           pretty
