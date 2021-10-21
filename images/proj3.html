@@ -1,0 +1,95 @@
+<p><style>
+    .rows {
+        display: flex;
+        align-items: center;
+    }
+    figcaption {
+        text-align: center;
+    }
+</style></p>
+<h1 id="project-3-face-morphing">Project 3 - Face Morphing</h1>
+<h3 id="eric-tang">Eric Tang</h3>
+<h2 id="defining-correspondences">Defining Correspondences</h2>
+<p>For this project I decided to morph between my face and a picture of my mom from when she was around my current age. I cropped and aligned the the images using the align_images code from the previous assignment. I then defined keypoints on both images using ginput, defining 45 points, and trying to outline major facial features. The images below show the original images, the keypoints I defined, and the images overlayed with the Delaunay triangulation of the mean of the two sets of keypoints.</p>
+<div class="rows">
+    <span><img src="./proj3_output/me_aligned.jpg" alt="image" width="300"/><figcaption>Me</figcaption></span>
+    <span><img src="./proj3_output/mom_aligned.jpg" alt="image" width="300"/><figcaption>My mom at 20</figcaption></span>
+      <span><img src="./proj3_output/me_keypoints.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
+    <span><img src="./proj3_output/mom_keypoints.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
+</div>
+
+<div class="rows">
+    <span><img src="./proj3_output/me_triangulation.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
+    <span><img src="./proj3_output/mom_triangulation.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
+</div>
+
+<h2 id="computing-the-mid-way-face-">Computing the &quot;Mid-Way Face&quot;</h2>
+<p>For calculating the mid-way face, I took the mean of the two sets of keypoints, and used the Delaunay triangulation over the mean of the keypoints in order to define triangles with which pixel values from the images would be sampled. I then calculated the transformation matrix that would translate a triangle in a source image to a triangle in the delaunay triangulation. I then applied the inverse of this transformation matrix to each triangle in the aforementioned Delaunay triangulation, and used RectBivariateSpline in order to interpolate pixel values based on the transformed triangle coordinates. Finally, I assigned the retrieved pixel values to the positions of the triangles from the delaunay triangulation. </p>
+<div class="rows">
+    <span><img src="./proj3_output/me_aligned.jpg" alt="image" width="300"/><figcaption>Me</figcaption></span>
+    <span><img src="./proj3_output/midway.jpg" alt="image" width="300"/><figcaption>Midway</figcaption></span>
+    <span><img src="./proj3_output/mom_aligned.jpg" alt="image" width="300"/><figcaption>My mom at 20</figcaption></span>
+</div>
+
+<h2 id="the-morph-sequence">The Morph Sequence</h2>
+<p>For creating the morph sequence, I computed 45 frames of images, which gradually cross dissolves from the source image into the destination image. I set the warp_frac to go from zero to one with the np.linspace function, and gradually warped the source image towards the average face, and the destination image from the average face to the original destination image. Overlaying these two images at every timestep using a cross dissolve yielded the morph sequence below.</p>
+<div class="rows">
+    <span><img src="./proj3_output/morph.gif" alt="image" width="300"/><figcaption>Morph</figcaption></span>
+</div>
+
+<h2 id="the-mean-face-of-a-population">The &quot;Mean Face&quot; of a Population</h2>
+<p>For this section, I used the dataset containing 37 faces of Danes. I calculated the mean of each of the keypoints defined for all of the faces, and used the Delaunay triangulation to define targets for warping the original faces into the average shape. Below are 6 Danes and their faces after being warped to the average face of the 37 danes in the dataset.</p>
+<div class="rows">
+    <span><img src="./proj3_output/dane1.jpg" alt="image" width="300"/><figcaption>Dane 1</figcaption></span>
+    <span><img src="./proj3_output/dane2.jpg" alt="image" width="300"/><figcaption>Dane 2</figcaption></span>
+      <span><img src="./proj3_output/dane3.jpg" alt="image" width="300"/><figcaption>
+    Dane 3</figcaption></span>
+    <span><img src="./proj3_output/dane4.jpg" alt="image" width="300"/><figcaption>Dane 4</figcaption></span>
+      <span><img src="./proj3_output/dane5.jpg" alt="image" width="300"/><figcaption>
+    Dane 5</figcaption></span>
+    <span><img src="./proj3_output/dane6.jpg" alt="image" width="300"/><figcaption>Dane 6</figcaption></span>
+</div>
+<div class="rows">
+    <span><img src="./proj3_output/morphed_dane1.jpg" alt="image" width="300"/></span>
+    <span><img src="./proj3_output/morphed_dane2.jpg" alt="image" width="300"/></span>
+      <span><img src="./proj3_output/morphed_dane3.jpg" alt="image" width="300"/></span>
+    <span><img src="./proj3_output/morphed_dane4.jpg" alt="image" width="300"/></span>
+      <span><img src="./proj3_output/morphed_dane5.jpg" alt="image" width="300"/></span>
+    <span><img src="./proj3_output/morphed_dane6.jpg" alt="image" width="300"/></span>
+</div>
+
+<p>I then used similar techniques as before in order to warp my face to the average shape of the Danes, and calculated a Delaunay triangulation over the keypoints defined on my face in order to create targets for warping the mean Dane face into the shape of my face.</p>
+<p>Below are images of my face, of the average danish face, my face warped to the shape of the average dane, and the average dane face warped to my face shape.</p>
+<div class="rows">
+    <span><img src="./proj3_output/me2_downsized.jpg" alt="image" width="300"/><figcaption>Me</figcaption></span>
+    <span><img src="./proj3_output/mean_face.jpg" alt="image" width="300"/><figcaption>Avg Dane</figcaption></span>
+</div>
+
+<div class="rows">
+    <span><img src="./proj3_output/meToDane.jpg" alt="image" width="300"/><figcaption>Me -&gt; Dane</figcaption></span>
+    <span><img src="./proj3_output/daneToMe.jpg" alt="image" width="300"/><figcaption>Avg Dane -&gt; Me</figcaption></span>
+</div>
+
+<h2 id="caricature">Caricature</h2>
+<p>For the caricature, I scaled the warp_frac to be greater than 1 and less than 0. I ran into some issues here with the triangulations overlapping while doing the extrapolations for the caricature, but the general idea still seems to be there, with features becoming more accentuated.</p>
+<div class="rows">
+    <span><img src="./proj3_output/alpha0.5_caricature.jpg" alt="image" width="300"/><figcaption>alpha = -0.5</figcaption></span>
+    <span><img src="./proj3_output/meToDane2.jpg" alt="image" width="300"/><figcaption>alpha = 1</figcaption></span>
+    <span><img src="./proj3_output/alpha1.5_caricature.jpg" alt="image" width="300"/><figcaption>alpha = 1.5</figcaption></span>
+</div>
+
+
+<h2 id="bells-and-whistles-change-ethnicity-to-danish">Bells and Whistles - Change Ethnicity to Danish</h2>
+<p>For two different images of myself I tried changing my ethnicity to danish. I got noticeably different results based on the initial size of my face in the image relative to the size of the average Dane. The first image in each row is found by warping my face to the shape of the mean Dane face. The second image in each row is created by warping the average dane&#39;s face to be the shape of my face, and averaging pixel values with the image of my face. The third image warps the shape of my face to be the shape of the average dane&#39;s face, then averages pixel values to generate the final image.</p>
+<div class="rows">
+    <span><img src="./proj3_output/meToDane.jpg" alt="image" width="300"/><figcaption>Just the shape</figcaption></span>
+    <span><img src="./proj3_output/bw_appearance1.jpg" alt="image" width="300"/><figcaption>Just the appearance</figcaption></span>
+    <span><img src="./proj3_output/bw_both1.jpg" alt="image" width="300"/><figcaption>Both</figcaption></span>
+</div>
+
+
+<div class="rows">
+    <span><img src="./proj3_output/meToDane2.jpg" alt="image" width="300"/><figcaption>Just the shape</figcaption></span>
+    <span><img src="./proj3_output/bw_appearance2.jpg" alt="image" width="300"/><figcaption>Just the appearance</figcaption></span>
+    <span><img src="./proj3_output/bw_both2.jpg" alt="image" width="300"/><figcaption>Both</figcaption></span>
+</div>
