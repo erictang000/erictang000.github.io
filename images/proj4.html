@@ -1,36 +1,36 @@
 <p><style>
-    .rows {
-        display: flex;
-        align-items: center;
-    }
-    figcaption {
-        text-align: center;
-    }
+  .rows {
+      display: flex;
+      align-items: center;
+  }
+  figcaption {
+      text-align: center;
+  }
 </style></p>
 <h1 id="project-4a-image-warping-and-mosaicing">Project 4A - Image Warping and Mosaicing</h1>
 <h3 id="eric-tang">Eric Tang</h3>
 <h2 id="shoot-the-pictures-and-define-keypoints-">Shoot the Pictures (and define keypoints)</h2>
 <p>For this step I shot pictures of some murals and streets around Berkeley, and defined 10 corresponding points between pairs of images of the same scene from a different perspective. </p>
 <div class="rows">
-    <span><img src="./proj4_starter/mural_center.jpg" alt="image" width="300"/><figcaption>Mural Center</figcaption></span>
-    <span><img src="./proj4_starter/mural_right.jpg" alt="image" width="300"/><figcaption>Mural Right</figcaption></span>
-      <span><img src="./proj4_output/mural_keypoints1.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
-    <span><img src="./proj4_output/mural_keypoints2.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
+  <span><img src="./proj4_starter/mural_center.jpg" alt="image" width="300"/><figcaption>Mural Center</figcaption></span>
+  <span><img src="./proj4_starter/mural_right.jpg" alt="image" width="300"/><figcaption>Mural Right</figcaption></span>
+    <span><img src="./proj4_output/mural_keypoints1.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
+  <span><img src="./proj4_output/mural_keypoints2.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
 </div>
 
 <div class="rows">
-    <span><img src="./proj4_starter/street1.jpg" alt="image" width="300"/><figcaption>Channing Left</figcaption></span>
-    <span><img src="./proj4_starter/street2.jpg" alt="image" width="300"/><figcaption>Channing Right</figcaption></span>
-      <span><img src="./proj4_output/street_keypoints1.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
-    <span><img src="./proj4_output/street_keypoints2.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
+  <span><img src="./proj4_starter/street1.jpg" alt="image" width="300"/><figcaption>Channing Left</figcaption></span>
+  <span><img src="./proj4_starter/street2.jpg" alt="image" width="300"/><figcaption>Channing Right</figcaption></span>
+    <span><img src="./proj4_output/street_keypoints1.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
+  <span><img src="./proj4_output/street_keypoints2.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
 </div>
 
 
 <div class="rows">
-    <span><img src="./proj4_starter/street_left.jpg" alt="image" width="300"/><figcaption>Blake Left</figcaption></span>
-    <span><img src="./proj4_starter/street_right.jpg" alt="image" width="300"/><figcaption>Blake Right</figcaption></span>
-      <span><img src="./proj4_output/street2_keypoints1.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
-    <span><img src="./proj4_output/street2_keypoints2.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
+  <span><img src="./proj4_starter/street_left.jpg" alt="image" width="300"/><figcaption>Blake Left</figcaption></span>
+  <span><img src="./proj4_starter/street_right.jpg" alt="image" width="300"/><figcaption>Blake Right</figcaption></span>
+    <span><img src="./proj4_output/street2_keypoints1.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
+  <span><img src="./proj4_output/street2_keypoints2.png" alt="image" width="300"/><figcaption>Keypoints</figcaption></span>
 </div>
 
 <h2 id="recover-homographies">Recover Homographies</h2>
@@ -39,58 +39,151 @@
 <h2 id="warp-the-images-and-rectify-some-">Warp the Images (and Rectify some)</h2>
 <p>In order to warp the images, we used the homography matrix H we calculated to transform the set of points in a given image into a set of points from which to sample from the image. I used the cv2.remap function in order to sample the transformed points from the original image (I also experimented with using RectBivariateSpline, and had reasonable results, but ran into issues on the borders of images).</p>
 <div class="rows">
-      <span><img src="./proj4_output/mural_warped1.png" alt="image" width="300"/><figcaption>Mural Warped</figcaption></span>
-    <span><img src="./proj4_output/mural_warped2.png" alt="image" width="300"/><figcaption>Mural Warped</figcaption></span>
+    <span><img src="./proj4_output/mural_warped1.png" alt="image" width="300"/><figcaption>Mural Warped</figcaption></span>
+  <span><img src="./proj4_output/mural_warped2.png" alt="image" width="300"/><figcaption>Mural Warped</figcaption></span>
 </div>
 
 <div class="rows">
-      <span><img src="./proj4_output/street_warped1.png" alt="image" width="300"/><figcaption>Channing Warped</figcaption></span>
-    <span><img src="./proj4_output/street_warped2.png" alt="image" width="300"/><figcaption>Channing Warped</figcaption></span>
+    <span><img src="./proj4_output/street_warped1.png" alt="image" width="300"/><figcaption>Channing Warped</figcaption></span>
+  <span><img src="./proj4_output/street_warped2.png" alt="image" width="300"/><figcaption>Channing Warped</figcaption></span>
 </div>
 
 
 <div class="rows">
-      <span><img src="./proj4_output/street2_warped1.png" alt="image" width="300"/><figcaption>Blake Warped</figcaption></span>
-    <span><img src="./proj4_output/street2_warped2.png" alt="image" width="300"/><figcaption>Blake Warped</figcaption></span>
+    <span><img src="./proj4_output/street2_warped1.png" alt="image" width="300"/><figcaption>Blake Warped</figcaption></span>
+  <span><img src="./proj4_output/street2_warped2.png" alt="image" width="300"/><figcaption>Blake Warped</figcaption></span>
 </div>
 
 <h3 id="rectified-images">Rectified Images</h3>
 <p>Something else interesting that can be done is rectifying an image to show a planar surface in a frontal-parallel fashion. This was done to validate the warping, with keypoints for the plane corresponding the the four corners of the original image for calculating the homography.</p>
 <div class="rows">
-      <span><img src="./proj4_starter/rasputin.jpg" alt="image" width="300"/><figcaption>Rasputin Music</figcaption></span>
-    <span><img src="./proj4_output/rasputin_rectified.png" alt="image" width="300"/><figcaption>Rasputin Music Rectified</figcaption></span>
+    <span><img src="./proj4_starter/rasputin.jpg" alt="image" width="300"/><figcaption>Rasputin Music</figcaption></span>
+  <span><img src="./proj4_output/rasputin_rectified.png" alt="image" width="300"/><figcaption>Rasputin Music Rectified</figcaption></span>
 </div>
 
 
 <div class="rows">
-      <span><img src="./proj4_starter/cream.jpg" alt="image" width="300"/><figcaption>CREAM</figcaption></span>
-    <span><img src="./proj4_output/cream_rectified.jpg" alt="image" width="300"/><figcaption>Koja Kitchen?</figcaption></span>
+    <span><img src="./proj4_starter/cream.jpg" alt="image" width="300"/><figcaption>CREAM</figcaption></span>
+  <span><img src="./proj4_output/cream_rectified.jpg" alt="image" width="300"/><figcaption>Koja Kitchen?</figcaption></span>
 </div>
 
 
 <h2 id="blend-images-into-a-mosaic">Blend images into a Mosaic</h2>
 <p>Finally, we blended warped images together into a mosaic, combining them using weighted averaging. I computed a mask of the overlapping region between two images in the mosaic, and set the mask value to be 0.5 in the overlapping region in order to try and best blend the two images together. The value in the mask would have to be updated for any additional image that also overlapped in the same region.</p>
 <div class="rows">
-    <span><img src="./proj4_starter/mural_center.jpg" alt="image" width="300"/><figcaption>Mural Center</figcaption></span>
-    <span><img src="./proj4_starter/mural_right.jpg" alt="image" width="300"/><figcaption>Mural Right</figcaption></span>
-      <span><img src="./proj4_output/mural_mask.png" alt="image" width="300"/><figcaption>Mask</figcaption></span>
-    <span><img src="./proj4_output/mural_mosaic.jpg" alt="image" width="300"/><figcaption>Mosaic</figcaption></span>
+  <span><img src="./proj4_starter/mural_center.jpg" alt="image" width="300"/><figcaption>Mural Center</figcaption></span>
+  <span><img src="./proj4_starter/mural_right.jpg" alt="image" width="300"/><figcaption>Mural Right</figcaption></span>
+    <span><img src="./proj4_output/mural_mask.png" alt="image" width="300"/><figcaption>Mask</figcaption></span>
+  <span><img src="./proj4_output/mural_mosaic.jpg" alt="image" width="300"/><figcaption>Mosaic</figcaption></span>
 </div>
 
 <div class="rows">
-    <span><img src="./proj4_starter/street1.jpg" alt="image" width="300"/><figcaption>Channing Left</figcaption></span>
-    <span><img src="./proj4_starter/street2.jpg" alt="image" width="300"/><figcaption>Channing Right</figcaption></span>
-      <span><img src="./proj4_output/street_mask.png" alt="image" width="300"/><figcaption>Mask</figcaption></span>
-    <span><img src="./proj4_output/street_mosaic.jpg" alt="image" width="300"/><figcaption>Mosaic</figcaption></span>
+  <span><img src="./proj4_starter/street1.jpg" alt="image" width="300"/><figcaption>Channing Left</figcaption></span>
+  <span><img src="./proj4_starter/street2.jpg" alt="image" width="300"/><figcaption>Channing Right</figcaption></span>
+    <span><img src="./proj4_output/street_mask.png" alt="image" width="300"/><figcaption>Mask</figcaption></span>
+  <span><img src="./proj4_output/street_mosaic.jpg" alt="image" width="300"/><figcaption>Mosaic</figcaption></span>
 </div>
 
 
 <div class="rows">
-    <span><img src="./proj4_starter/street_left.jpg" alt="image" width="300"/><figcaption>Blake Left</figcaption></span>
-    <span><img src="./proj4_starter/street_right.jpg" alt="image" width="300"/><figcaption>Blake Right</figcaption></span>
-      <span><img src="./proj4_output/street2_mask.png" alt="image" width="300"/><figcaption>Mask</figcaption></span>
-    <span><img src="./proj4_output/street2_mosaic.jpg" alt="image" width="300"/><figcaption>Mosaic</figcaption></span>
+  <span><img src="./proj4_starter/street_left.jpg" alt="image" width="300"/><figcaption>Blake Left</figcaption></span>
+  <span><img src="./proj4_starter/street_right.jpg" alt="image" width="300"/><figcaption>Blake Right</figcaption></span>
+    <span><img src="./proj4_output/street2_mask.png" alt="image" width="300"/><figcaption>Mask</figcaption></span>
+  <span><img src="./proj4_output/street2_mosaic.jpg" alt="image" width="300"/><figcaption>Mosaic</figcaption></span>
 </div>
 
-<h2 id="what-did-i-learn">What did I learn</h2>
-<p>I learned how we can warp and rectify images to change perspective easily, as well as how to stitch together images by computing homographies, which is pretty cool.</p>
+
+<h1 id="part-2-auto-stitching-photo-mosaics">Part 2: Auto Stitching Photo Mosaics</h1>
+<p>In Part 2 of this project, we attempted to automate the process of picking points for aligning images in order to create a homography between them. The implementation chosen for generating and matching features was based off of the paper &quot;Multi-Image Matching using Multi-Scale Oriented Patches&quot; by Brown et al.</p>
+<h2 id="detecting-corner-features-in-an-image-harris-interest-point-detector-">Detecting corner features in an image (Harris Interest Point Detector)</h2>
+<p>We first used the Harris interest point detection algorithm in order to identify corners that would be good for aligning images with. The results of generating Harris interest points with a relative threshold of 0.05 are shown below for each of the 3 pairs of images used in this next section.</p>
+<div class="rows">
+  <span><img src="./proj4b_starter/street1.jpg" alt="image" width="300"/><figcaption>Channing Left</figcaption></span>
+  <span><img src="./proj4b_starter/street2.jpg" alt="image" width="300"/><figcaption>Channing Right</figcaption></span>
+</div>
+<div class="rows">
+  <span><img src="./proj4b_output/street_left_harris.jpg" alt="image" width="300"/><figcaption>Channing Left Harris</figcaption></span>
+   <span><img src="./proj4b_output/street_right_harris.jpg" alt="image" width="300"/><figcaption>Channing Right Harris</figcaption></span>
+</div>
+
+<div class="rows">
+  <span><img src="./proj4b_starter/street_left.jpg" alt="image" width="300"/><figcaption>Blake Left</figcaption></span>
+  <span><img src="./proj4b_starter/street_right.jpg" alt="image" width="300"/><figcaption>Blake Right</figcaption></span>
+</div>
+<div class="rows">
+  <span><img src="./proj4b_output/street2_left_harris.jpg" alt="image" width="300"/><figcaption>Blake Left Harris</figcaption></span>
+   <span><img src="./proj4b_output/street2_right_harris.jpg" alt="image" width="300"/><figcaption>Blake Right Harris</figcaption></span>
+</div>
+
+<div class="rows">
+  <span><img src="./proj4b_starter/lot_left.jpg" alt="image" width="300"/><figcaption>Parking Lot Left</figcaption></span>
+  <span><img src="./proj4b_starter/lot_right.jpg" alt="image" width="300"/><figcaption>Parking Lot Right</figcaption></span>
+</div>
+<div class="rows">
+  <span><img src="./proj4b_output/lot_left_harris.jpg" alt="image" width="300"/><figcaption>Parking Lot Left Harris</figcaption></span>
+   <span><img src="./proj4b_output/lot_right_harris.jpg" alt="image" width="300"/><figcaption>Parking Lot Right Harris</figcaption></span>
+</div>
+
+<h2 id="adaptive-non-maximal-suppression">Adaptive Non-Maximal Suppression</h2>
+<p>Next, we narrowed down the set of corners selected in the previous section using the Harris point detector using Adaptive Non-Maximal Suppression in order to generate a set of strong points of interest that are spatially distributed well over the image. Using the algorithm as described in Brown et al&#39;s paper, we narrowed down the number of interest points to 500 per image. These points are shown below for each image pair.</p>
+<div class="rows">
+  <span><img src="./proj4b_output/street_left_anms.jpg" alt="image" width="300"/><figcaption>Channing Left ANMS</figcaption></span>
+   <span><img src="./proj4b_output/street_right_anms.jpg" alt="image" width="300"/><figcaption>Channing Right ANMS</figcaption></span>
+</div>
+
+<div class="rows">
+  <span><img src="./proj4b_output/street2_left_anms.jpg" alt="image" width="300"/><figcaption>Blake Left ANMS</figcaption></span>
+   <span><img src="./proj4b_output/street2_right_anms.jpg" alt="image" width="300"/><figcaption>Blake Right ANMS</figcaption></span>
+</div>
+<div class="rows">
+  <span><img src="./proj4b_output/lot_left_anms.jpg" alt="image" width="300"/><figcaption>Parking Lot Left ANMS</figcaption></span>
+   <span><img src="./proj4b_output/lot_right_anms.jpg" alt="image" width="300"/><figcaption>Parking Lot Right ANMS</figcaption></span>
+</div>
+
+<h2 id="feature-descriptor-extraction">Feature Descriptor Extraction</h2>
+<p>Once we narrowed down our set of corners, we sampled a 40x40 window around each of them, then downsampled that 40x40 window to an 8x8 patch, which was then normalized. Thus, each of the points had a length 64 vector describing the features locally at that point.</p>
+<h2 id="feature-matching">Feature Matching</h2>
+<p>Once we extracted our features, we used the sklearn implementation of nearest neighbors in order to get the nearest neighbors in terms of the features to each of the points in our two images. We used the basic approach to Lowe thresholding, by thresholding on the ratio between the first and second nearest neighbors. This gave us a set of features that matched between the two images that we could then use to compute a homography.</p>
+<div class="rows">
+  <span><img src="./proj4b_output/street_left_matched_features.jpg" alt="image" width="300"/><figcaption>Channing Left Matched</figcaption></span>
+   <span><img src="./proj4b_output/street_right_matched_features.jpg" alt="image" width="300"/><figcaption>Channing Right Matched</figcaption></span>
+</div>
+
+<div class="rows">
+  <span><img src="./proj4b_output/street2_left_matched_features.jpg" alt="image" width="300"/><figcaption>Blake Left Matched</figcaption></span>
+   <span><img src="./proj4b_output/street2_right_matched_features.jpg" alt="image" width="300"/><figcaption>Blake Right Matched</figcaption></span>
+</div>
+<div class="rows">
+  <span><img src="./proj4b_output/lot_left_matched_features.jpg" alt="image" width="300"/><figcaption>Parking Lot Left Matched</figcaption></span>
+   <span><img src="./proj4b_output/lot_right_matched_features.jpg" alt="image" width="300"/><figcaption>Parking Lot Right Matched</figcaption></span>
+</div>
+
+<h2 id="ransac">RANSAC</h2>
+<p>Next, once we had a set of matching coordinates between images, we filtered out matches that were not accurate using RANSAC. We set epsilon to have a value of 5, and found the set of indices within the matched pairs that gave the homography that included the most indices as being accurate under the threshold. We then computed H using the pairs corresponding to the inlier indices - after which, we were ready to warp our images to form mosaics again.</p>
+<h2 id="final-results">Final Results</h2>
+<div class="rows">
+  <span><img src="./proj4b_starter/street1.jpg" alt="image" width="300"/><figcaption>Channing Left</figcaption></span>
+  <span><img src="./proj4b_starter/street2.jpg" alt="image" width="300"/><figcaption>Channing Right</figcaption></span>
+</div>
+<div class="rows">
+  <span><img src="./proj4b_output/street.jpg" alt="image" width="300"/><figcaption>Channing Auto Warped</figcaption></span>
+   <span><img src="./proj4b_output/street_mosaic.jpg" alt="image" width="300"/><figcaption>Channing Manual Warped</figcaption></span>
+</div>
+
+<div class="rows">
+  <span><img src="./proj4b_starter/street_left.jpg" alt="image" width="300"/><figcaption>Blake Left</figcaption></span>
+  <span><img src="./proj4b_starter/street_right.jpg" alt="image" width="300"/><figcaption>Blake Right</figcaption></span>
+</div>
+<div class="rows">
+  <span><img src="./proj4b_output/street2.jpg" alt="image" width="300"/><figcaption>Blake Auto Warped</figcaption></span>
+   <span><img src="./proj4b_output/street2_mosaic.jpg" alt="image" width="300"/><figcaption>Blake Manual Warped</figcaption></span>
+</div>
+
+<div class="rows">
+  <span><img src="./proj4b_starter/lot_left.jpg" alt="image" width="300"/><figcaption>Parking Lot Left</figcaption></span>
+  <span><img src="./proj4b_starter/lot_right.jpg" alt="image" width="300"/><figcaption>Parking Lot Right</figcaption></span>
+</div>
+<div class="rows">
+  <span><img src="./proj4b_output/lot.jpg" alt="image" width="300"/><figcaption>Parking Lot Auto Warped</figcaption></span>
+   <span><img src="./proj4b_output/lot_old.jpg" alt="image" width="300"/><figcaption>Parking Lot Manual Warped</figcaption></span>
+</div>
