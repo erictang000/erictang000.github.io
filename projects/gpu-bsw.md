@@ -2,6 +2,8 @@
 layout: post
 title: GPU-BSW
 ---
+<img src="../../images/work_stealing.png" alt="work_stealing" width="600"/>
+
 ## Work Stealing for GPU Batched Smith-Waterman Algorithm on HPC
 In this project, I (along with a partner) aimed to implement CPU work stealing from a shared work queue for the Smith-Waterman algorithm. Research showed that the most optimal CPU implementation of Smith-Waterman was competitive with GPU implementations for an instruction set (SSE2) an implementation from 2013 - thus it was important to both be able to take advantage of the parallel computation ability of GPUs, and the lack of the need for transfer latency on CPU, in order to optimize the Smith-Waterman algorithm on high performance compute clusters, where the compute environment was heterogeneous. 
 

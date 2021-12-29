@@ -1,0 +1,64 @@
+<p><style>
+    .rows {
+        display: flex;
+        align-items: center;
+    }
+    figcaption {
+        text-align: center;
+    }
+</style></p>
+<h1 id="final-project">Final Project</h1>
+<h3 id="eric-tang">Eric Tang</h3>
+<h1 id="final-project-1-gradient-domain-fusion">Final Project 1 - Gradient Domain Fusion</h1>
+<h2 id="part-2-1-toy-problem">Part 2.1 - Toy Problem</h2>
+<p>For the toy problem, we used the x and y gradients along with the intensity of the top left pixel of an image to reconstruct the image.</p>
+<p>We did this by setting up a system of equations in order to minimize the expressions (v(x+1,y)-v(x,y) - (s(x+1,y)-s(x,y)))^2 and (v(x,y+1)-v(x,y) - (s(x,y+1)-s(x,y)))^2, where s is the source image and v is the image to be solved for. We also added the equation v(1,1) = s(1,1) to the system of equations to ensure the top left corners of the images were the same color.</p>
+<div class="rows">
+    <span><img src="./final_starter/toy_problem.png" alt="image" width="300"/><figcaption>Original Image</figcaption></span>
+    <span><img src="./final_output/2.1.jpg" alt="image" width="300"/><figcaption>Reconstructed Image</figcaption></span>
+</div>
+
+<h2 id="part-2-2-poisson-blending">Part 2.2 - Poisson Blending</h2>
+<p>In this section, we blended two images, one of which was going to be pasted on the other. We refer to the image to be pasted on the other as the source image, the image that is to be the background as the target image, and the final result as the result image.</p>
+<p>We achieved this blending this by setting up a system of equations to minimze the distance between the gradients in the results image and the gradients in the source image. We also begin by leaving the boundaries of the source image equal to the corresponding points in the target image, in order to begin the blending from the borders of the source image.</p>
+<p>The results are displayed below.</p>
+<div class="rows">
+    <span><img src="./final_output/2.2a_naive.jpg" alt="image" width="300"/><figcaption>Before Blending</figcaption></span>
+    <span><img src="./final_output/2.2a.jpg" alt="image" width="300"/><figcaption>After Blending</figcaption></span>
+</div>
+<div class="rows">
+    <span><img src="./final_output/2.2b_naive.jpg" alt="image" width="300"/><figcaption>Before Blending</figcaption></span>
+    <span><img src="./final_output/2.2b.jpg" alt="image" width="300"/><figcaption>After Blending</figcaption></span>
+</div>
+<div class="rows">
+    <span><img src="./final_output/2.2c_naive.jpg" alt="image" width="300"/><figcaption>Before Blending</figcaption></span>
+    <span><img src="./final_output/2.2c.jpg" alt="image" width="300"/><figcaption>After Blending</figcaption></span>
+</div>
+
+
+<h1 id="final-project-2-a-neural-algorithm-of-artistic-style">Final Project 2 - A Neural Algorithm of Artistic Style</h1>
+<p>For this project, I used the algorithm described by Gatys et al. in order to perform style transfer on various images. The big picture is that we calculate the loss in terms of content and style over the image following the convolutional filters in a VGG model (we compute the MSE loss between our filtered input and the filtered target in terms of both content and style), and we backpropogate this loss in order to update not the model, but the input image itself. Doing this for a number of iterations allows us to get an art piece with the style transferred over.</p>
+<p>Some results are displayed below.</p>
+<div class="rows">
+    <span><img src="./final_starter/arnolfini.jpeg" alt="image" width="300"/><figcaption>Arnolfini</figcaption></span>
+    <span><img src="./final_starter/starry_night.jpeg" alt="image" width="300"/><figcaption>Starry Night</figcaption></span>
+    <span><img src="./final_output/arnolfini_starry_night.jpg" alt="image" width="300"/><figcaption>Starry Arnolfini Night</figcaption></span>
+</div>
+
+<div class="rows">
+    <span><img src="./final_starter/desk.jpg" alt="image" width="300"/><figcaption>My Desk</figcaption></span>
+    <span><img src="./final_starter/french_impressionist.jpeg" alt="image" width="300"/><figcaption>Impressionist</figcaption></span>
+    <span><img src="./final_output/desk_french.jpg" alt="image" width="300"/><figcaption>My Impressionist Desk</figcaption></span>
+</div>
+
+<div class="rows">
+    <span><img src="./final_starter/sunday.jpeg" alt="image" width="300"/><figcaption>Sunday</figcaption></span>
+    <span><img src="./final_starter/wheat_field.jpeg" alt="image" width="300"/><figcaption>Wheat Field</figcaption></span>
+    <span><img src="./final_output/sunday_wheat.jpg" alt="image" width="300"/><figcaption>Sunday Wheat Field</figcaption></span>
+</div>
+
+<h2 id="implementation-specifics">Implementation Specifics</h2>
+<p>I used layer conv3_1 for the content representation, and layers: ‘conv1 1’ (A), ‘conv1 1’ and ‘conv2 1’ (B), ‘conv1 1’, ‘conv2 1’ and ‘conv3 1’ (C), ‘conv1 1’, ‘conv2 1’, ‘conv3 1’ and ‘conv4 1’ (D), ‘conv1 1’, ‘conv2 1’, ‘conv3 1’, ‘conv4 1’
+and ‘conv5 1’ (E), for the style representation (as detailed in the original paper). I also replaced MaxPooling with Average pooling for better gradient flow as mentioned in the paper, and adjusted ReLU to not be in place, as I found this cause memory errors. </p>
+<p>I constructed the model to run the input image through using nn.Sequential, with auxiliary loss layers for the content and style after every convolutional layer, stopping after the 5th conv layer, since that was the last representation used before propogating the loss.</p>
+<p>I found that using a content to style weighting ratio of 1e-3 was not enough for some images, and for the number of iterations that I ran things for, so I used a larger style weight of 1e8 to a content weight of 1, for a ratio of 1e-8. After running 10,000 iterations using the Adam optimizer with the model weights frozen over the input image, and with the aforementioned layers used for the target content and style representations, I was able to get the above results.</p>
