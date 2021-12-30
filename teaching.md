@@ -32,7 +32,7 @@ In general, for most CS classes that allow you a cheat sheet, what's worked for 
     * Grade the exam like you imagine a TA who is not you would grade it.
     * Spend ~1-2 hours reviewing and understanding solutions, and make any updates to your cheat sheet if you need.
     * Generally if I can find a distribution for the exam, I'll feel good once I can get the median or a little above it on the last practice exam I take (since I'll probably do better than that on the actual exam)
-* 5 practice exams total is overkill, but has generally yielded pretty good results for me (at least, better than when I do fewer lol). Usually now I'll do 2-3 since upper divs tend to have less students who try as hard as they had to for 61a/b + 70.
+* 5 practice exams total is overkill, but has generally yielded pretty good results for me. Usually now I'll do 2-3 since upper division courses tend to have less students who try as hard as they had to for 61a/b + 70.
 
 ## Old Resources/Slides
 ### Fall 2020
