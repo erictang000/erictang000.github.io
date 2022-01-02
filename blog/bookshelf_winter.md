@@ -7,6 +7,7 @@ Started the fall semester and stopped reading anything again - picking things ba
 * [Digital Minimalism - Cal Newport](/blog/bookshelf_winter_reviews/digital_minimalism_review)
 * Steve Jobs - Walter Isaacson
 * What I Talk About When I Talk About Running - Haruki Murakami
+* Genius Makers - Cade Metz
 
 #### Books I Didn't Want to Finish
 * The Making of a Manager - Julie Zhuo 
