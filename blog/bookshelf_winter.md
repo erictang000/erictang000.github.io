@@ -8,6 +8,7 @@ Started the fall semester and stopped reading anything again - picking things ba
 * Steve Jobs - Walter Isaacson
 * What I Talk About When I Talk About Running - Haruki Murakami
 * Genius Makers - Cade Metz
+* So Good They Can't Ignore You - Cal Newport
 
 #### Books I Didn't Want to Finish
 * The Making of a Manager - Julie Zhuo 
@@ -16,3 +17,4 @@ Started the fall semester and stopped reading anything again - picking things ba
     * I agree with the reviews that this book could definitely have stayed as just an article. It's pretty one-sided and gets repetitive.
 
 #### Books in Progress
+* Good Economics for Hard Times - Abhijit Banerjee and Esther Duflo
