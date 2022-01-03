@@ -9,6 +9,7 @@ Started the fall semester and stopped reading anything again - picking things ba
 * What I Talk About When I Talk About Running - Haruki Murakami
 * Genius Makers - Cade Metz
 * So Good They Can't Ignore You - Cal Newport
+* A Ghost in the Throat - Doireann Ni Ghriofa
 
 #### Books I Didn't Want to Finish
 * The Making of a Manager - Julie Zhuo 

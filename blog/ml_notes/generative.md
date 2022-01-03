@@ -26,7 +26,10 @@ $$\max_{p \in P_{x,z}} \sum_{x\in X} \log{p(x)} = \max_{p \in P_{x,z}} log \int_
 
 However, solving for the integral in this equation is computationally infeasible. This also makes it difficult to compute the posterior distribution we earlier stated we were interested in - $$p(z\mid x)$$, since $$p(z\mid x) = \frac{p(z,x)}{p(x)}$$, and we just showed $$p(x)$$ to be difficult to solve for. An alternative is attempting to solve for a $$q \in Q$$ such that $$q$$ most closely approximates $$p(z\mid x)$$. We can do this by once again trying to minimize the KL divergence. 
 
-$$\min_
+
+$$\min_{q\in Q} D_{KL}(q(z)\|p(z\mid x))$$
+
+<!-- $$D_{KL} -->
 
 
 #### Autoencoders
@@ -41,4 +44,4 @@ Autoencoders are a type of deep neural network consisting of an encoder and a de
 * [Carl Doersch Notes](https://arxiv.org/pdf/1606.05908.pdf)
 * [Stanford CS 236 Notes](https://deepgenerativemodels.github.io/notes/index.html)
 * [Joseph Rocca Medium Post](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73)
-* []
+* [Gregory Gundersen Blog](https://gregorygundersen.com/blog/2021/04/16/variational-inference/)
