@@ -19,3 +19,6 @@ Started the fall semester and stopped reading anything again - picking things ba
 
 #### Books in Progress
 * Good Economics for Hard Times - Abhijit Banerjee and Esther Duflo
+* The Premonition: A Pandemic Story - Michael Lewis
+* Elon Musk - Ashlee Vance
+* The Code Breakers - Walter Isaacson
