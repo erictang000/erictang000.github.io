@@ -4,12 +4,14 @@ title: Winter 2021 Bookshelf
 ---
 Started the fall semester and stopped reading anything again - picking things back up over winter break, and hopefully continuing through the spring semester this time. Taking lots of suggestions from [Seita's Place](https://danieltakeshi.github.io/). Writing reviews and takeaways for books I particularly liked or didn't like.
 #### Books Finished
-* [Digital Minimalism - Cal Newport](/blog/bookshelf_winter_reviews/digital_minimalism_review)
+* Digital Minimalism - Cal Newport
 * Steve Jobs - Walter Isaacson
 * What I Talk About When I Talk About Running - Haruki Murakami
 * Genius Makers - Cade Metz
 * So Good They Can't Ignore You - Cal Newport
 * A Ghost in the Throat - Doireann Ni Ghriofa
+* Man's Search for Meaning - Victor Frankl
+* The Premonition: A Pandemic Story - Michael Lewis
 
 #### Books I Didn't Want to Finish
 * The Making of a Manager - Julie Zhuo 
@@ -19,6 +21,5 @@ Started the fall semester and stopped reading anything again - picking things ba
 
 #### Books in Progress
 * Good Economics for Hard Times - Abhijit Banerjee and Esther Duflo
-* The Premonition: A Pandemic Story - Michael Lewis
 * Elon Musk - Ashlee Vance
 * The Code Breakers - Walter Isaacson
