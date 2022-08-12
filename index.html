@@ -8,153 +8,30 @@ title: Home
   <link href="images/fontawesome/css/solid.css" rel="stylesheet">
 </head>
 
-<style type="text/css">
-  .fab {
-    color: black;
-  }
-  .fas {
-    color: black;
-  }
- .grid {
-  grid-template-columns: 1fr 2fr;
-  display: flex;
- }
- .one {
-  width: 160px;
-  height: 160px;
-  position: relative;
-}
-papertitle {
-  font-size: 17px;
-  font-weight: 700
-}
-  </style>
 <div class="grid">
-  <div class="col-1-2" style="width: 75%;">
-      <img src="images/me.jpg"
-         alt="picture"
-         style="width: 75%;" />
-      <h2>
-        <span>Eric Tang</span>
-        <div>
-          <a href="https://www.linkedin.com/in/erictang000"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.github.com/erictang000"><i class="fab fa-github"></i></a>
-          <a href="https://www.twitter.com/erictang000"><i class="fab fa-twitter"></i></a>
-          <a href="images/EricTangCV.pdf"><i class="fas fa-file"></i></a>
-        </div>
-      </h2>
-      <div style="font-size: 15px;">
-        <a href="/projects">Projects</a>
-        <span>/</span>
-        <a href="/teaching">Teaching</a>
-        <span>/</span>
-        <a href="/blog">Blog</a>
-      </div>
+  <div class="col-1-3" style="width: 75%;">
+    <div class="rowCenterFlexBox">
+      <img src="images/me_new.jpg"
+        alt="picture"
+        style="width: 75%;" />
     </div>
-    <div class="col-1-2" style="width:180%; font-size: 17px;">
-      <p>Hi! I'm Eric Tang, a senior at UC Berkeley studying EECS. I'm interested in all things CS, but most recently I've enjoyed exploring machine learning safety, and the applications of ML in physical sciences. I also enjoy teaching data structures and algorithms, and have TA'd 5 times for CS 61B. In my free time outside of computer science activities I also like to run, read, and play/follow basketball.
-      </p>
-      <p>
-      This site will host some of the teaching resources for 61B I've compiled over the last 4 semesters, some course and personal projects that I thought were cool, and hopefully some blog posts about what I've been reading/thinking about.
-      </p>
   </div>
-</div>
-<div style="font-size: 17px;">
-  <p style="margin-top:10px;font-size: 25px; font-weight:bold">
-    Brief Bio:
-  </p>
-    <li><b>Jun 2021-Aug 2021:</b> Tech R&D Intern @ Accenture Labs</li>
-    <li><b>October 2020-Present:</b> Undergrad Researcher @ BAIR</li>
-    <li><b>Jun 2020-Aug 2020:</b> Tech R&D Intern @ Accenture Labs</li>
-    <li><b>April 2019-Present:</b> Undergrad Researcher @ Crommie Group</li>
-</div>
-<div class="grid">
-  <div class="col-1-2" style="width:180%; font-size: 17px;">
-
-    <p style="margin-top: 30px; font-size: 25px; font-weight:bold">
-    Publications:
+  <div class="col-1-3" style="width:180%; font-size: 17px;">
+    <h2><span>Eric Tang</span></h2>
+    <p>Hi! I'm Eric, a first year master's student studying Computer Science at Stanford.
+      I'm interested in how large neural networks can be trained to best align with human values 
+      through the modes of both vision and language. Before attending Stanford, I graduated from UC Berkeley with
+      a bachelor's degree in EECS (go bears).
     </p>
-
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <img src='images/v2v.png' width="160">
-          </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-            <papertitle>How Would The Viewer Feel? Estimating Wellbeing From Video Scenarios</papertitle>
-          <br>
-          Dan Hendrycks,
-          Mantas Mazeika,
-          <strong>Eric Tang</strong>,
-          Andy Zou,
-          Dawn Song,
-          David Forsyth,
-          Jacob Steinhardt
-          <br>
-          <em>CVPR 2022 submission</em>
-          <br>
-          <p>[<a href="https://drive.google.com/file/d/1poWobCFQwaqOpp7UAcAABQ870KjLjF3Z/view?usp=sharing">Draft</a>]</p>
-          <p></p>
-          <p>
-            Introduces the VCE and V2V datasets for understanding emotional response and viewer wellbeing for video data.
-          </p>
-        </td>
-      </tr> 
-
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <img src='images/math.png' width="160">
-          </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-            <papertitle>Measuring Mathematical Problem Solving with the MATH Dataset</papertitle>
-          <br>
-          Dan Hendrycks,
-          Collin Burns,
-          Saurav Kadavath,
-          Akul Arora,
-          Steven Basart,
-          <strong>Eric Tang</strong>,
-          Dawn Song,
-          Jacob Steinhardt
-          <br>
-          <em>NeurIPS (Datasets and Benchmarks Track)</em>, 2021
-          <br>
-          <p>[<a href="https://arxiv.org/pdf/2103.03874.pdf">paper</a>][<a href="https://github.com/hendrycks/math">code</a>]</p>
-          <p></p>
-          <p>
-            Introduces the MATH dataset for measuring mathmatical reasoning in large language models, and the AMPS dataset for pretraining.
-          </p>
-        </td>
-      </tr> 
-
-      <tr>
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <img src='images/tunable.gif' width="160">
-          </div>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-            <papertitle>Imaging Reconfigurable Molecular Concentration on a Graphene Field-Effect Transistor</papertitle>
-          <br>
-          Franklin Liou, Hsin-Zon Tsai, Andrew S Aikawa, Kyler C Natividad,
-          <strong>Eric Tang</strong>,
-          Ethan Ha, Alexander Riss, Kenji Watanabe, Takashi Taniguchi, Johannes Lischner, Alex Zettl, Michael F Crommie
-          <br>
-          <em>Nano Letters</em>, 2021
-          <br>
-          <p>[<a href="https://pubs.acs.org/doi/full/10.1021/acs.nanolett.1c03039">paper</a>]</p>
-          <p></p>
-          <p>
-            Uses scanning tunneling microscopy to demonstrate that molecules deposited onto graphene field-effect transistors (FETs) exhibit reversible, electrically tunable surface concentration.
-          </p>
-        </td>
-      </tr> 
-
-    </tbody></table>
+    <p>
+    This site hosts my course and personal projects that I thought were cool, blog posts about what 
+    I've been reading and learning about, and some of the teaching resources for I've compiled over the years!
+    </p>
+    <div style="font-size: 19px;">
+      <a href="https://www.linkedin.com/in/erictang000"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.github.com/erictang000"><i class="fab fa-github"></i></a>
+      <a href="https://www.twitter.com/erictang000"><i class="fab fa-twitter"></i></a>
+      <a href="images/EricTangCV.pdf"><i class="fas fa-file"></i></a>
+    </div>
   </div>
 </div>
