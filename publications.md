@@ -15,17 +15,19 @@ title: Publications
             <td style="padding:20px;width:75%;vertical-align:middle">
                 <papertitle>How Would The Viewer Feel? Estimating Wellbeing From Video Scenarios</papertitle>
             <br>
-            Dan Hendrycks,
-            Mantas Mazeika,
-            <strong>Eric Tang</strong>,
+            Mantas Mazeika*,
+            <strong>Eric Tang*</strong>,
             Andy Zou,
+            Steven Basart,
+            Jun Shern Chen,
             Dawn Song,
             David Forsyth,
-            Jacob Steinhardt
+            Jacob Steinhardt,
+            Dan Hendrycks
             <br>
-            <em>NeurIPS (Datasets and Benchmarks Track) Submission, 2022</em>
+            <em>NeurIPS (Datasets and Benchmarks Track) 2022</em>
             <br>
-            <p>[<a href="https://openreview.net/pdf?id=jbdp9m7nr0R">paper</a>]</p>
+            <p>[<a href="s">paper</a>]</p>
             <p></p>
             <p>
                 Introduces the VCE and V2V datasets for understanding emotional response and viewer wellbeing for video data.

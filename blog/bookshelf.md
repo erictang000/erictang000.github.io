@@ -2,6 +2,8 @@
 layout: post
 title: Summer 2021 Bookshelf
 ---
+Last Updated: August 2021
+
 Read more books in the last 2 months than I have in a long time - keeping track here. Putting books I liked better in bold.
 #### Books Finished
 * Artificial Intelligence - Melanie Mitchell
