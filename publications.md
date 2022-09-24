@@ -27,7 +27,7 @@ title: Publications
             <br>
             <em>NeurIPS (Datasets and Benchmarks Track) 2022</em>
             <br>
-            <p>[<a href="s">paper</a>]</p>
+            <p>[<a href="https://openreview.net/forum?id=jbdp9m7nr0R">paper</a>]</p>
             <p></p>
             <p>
                 Introduces the VCE and V2V datasets for understanding emotional response and viewer wellbeing for video data.
