@@ -28,9 +28,9 @@ $$\DeclareMathOperator*{\argmin}{argmin}
 * In general, polynomials are universal approximators, but the problem with large polynomials is that the number of terms increases exponentially with the degree of the polynomial.
     * The kernel trick can help get around this cost in certain cases
 * In general hyperparameters can fall into two catagories - model hyperparameters that determine the structure of a model, and optimization hyperparameters that determine the optimization procedure
-
+<!-- 
 ### The Kernel Trick
-* When we model some polynomial, we 
+* When we model some polynomial, we  -->
 
 
 ### Previous Questions
@@ -52,6 +52,11 @@ $$\DeclareMathOperator*{\argmin}{argmin}
     * Exploding gradients can be identified by NaN model weights or outputs due to overflow
     * Solutions can include normalization (Batch/LayerNorm), reducing the number of layers, gradient clipping, and using better weight initialization
         * ResNets also were motivated by solving this problem - the residual connections help gradient flow
+* What's the last paper/github repo that you pulled the code and ran?
+* Explain how transformers work?
+    * In a sequence we can have repeat elements - how do we model these differently?
+        * Positional encoding
+    * Generally given a sequence of tokens, we want to model each token in the context of the rest of the tokens, so we can use the attention operation to generate a context embedding for each token. This is parallelizable, unlike LSTMs, so we can train these much faster.
 
 ### Generic ML Questions
 * Explain the Bias Variance Tradeoff
@@ -63,3 +68,11 @@ $$\DeclareMathOperator*{\argmin}{argmin}
     * Given a binary classifier:
         * Precision is defined as the number of correct positive predictions divided by the number of positive predictions
         * Recall is the number of correct positive predictions divided by the number of actual positives
+
+### Computer Vision Questions
+* What operations exactly happen during a convolution?
+    * Element wise multiplication 
+* Explain the concept of a receptive field
+    * 
+    * More specifically, if you have two 3x3 convolutional filters, with a stride of 1, and you pass them over the image successively, what is the receptive field of an element of the output
+        * Each element in the final activation will have a receptive field of 5x5
