@@ -4,7 +4,6 @@ title: Winter 2021 Bookshelf
 ---
 Last Updated: January 2022
 
-Started the fall semester and stopped reading anything again - picking things back up over winter break, and hopefully continuing through the spring semester this time. Taking lots of suggestions from [Seita's Place](https://danieltakeshi.github.io/). Writing reviews and takeaways for books I particularly liked or didn't like.
 #### Books Finished
 * Digital Minimalism - Cal Newport
 * Steve Jobs - Walter Isaacson

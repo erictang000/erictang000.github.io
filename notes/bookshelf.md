@@ -4,7 +4,6 @@ title: Summer 2021 Bookshelf
 ---
 Last Updated: August 2021
 
-Read more books in the last 2 months than I have in a long time - keeping track here. Putting books I liked better in bold.
 #### Books Finished
 * Artificial Intelligence - Melanie Mitchell
 * Atomic Habits - James Clear
@@ -21,12 +20,3 @@ Read more books in the last 2 months than I have in a long time - keeping track 
 * Talking to Strangers - Malcolm Gladwell (don't read this it was not good lol)
 * The Art of Thinking Clearly - Rolf Dobelli
 * Stoner - John Williams
-
-#### Books in Progress
-* Dear Life - Alice Munro
-* Superforecasting - Dan Gardner and Phillip Tetlock
-* Thinking, Fast and Slow - Daniel Kahneman
-* The Intelligent Investor - Benjamin Graham
-* Zen and the Art of Motorcycle Maintainance - Robert Pirsig
-* Catch-22 - Joseph Heller
-* Infinite Jest - David Foster Wallace
