@@ -17,7 +17,6 @@ title: Projects
 </style>
 
 ### [**GPU-BSW Work Stealing**](/projects/gpu-bsw) <a href="https://github.com/erictang000/GPU-BSW-Work-Stealing"><i class="fab fa-github"></i></a> <a href="../images/gpu_bsw_report.pdf"><i class="fas fa-file"></i></a>
-
 Implemented work stealing for a batched GPU implementation of the Smith-Waterman DNA sequence alignment Algorithm using **CUDA** and **OpenMP** in **C++** for heterogenous computing environments. Final project for CS 267 - Parallel Computing.
 
 

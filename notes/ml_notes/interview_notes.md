@@ -57,6 +57,19 @@ $$\DeclareMathOperator*{\argmin}{argmin}
     * Generally given a sequence of tokens, we want to model each token in the context of the rest of the tokens, so we can use the attention operation to generate a context embedding for each token. This is parallelizable, unlike LSTMs, so we can train these much faster.
 * Give an example of a logistic regression model. Given inputs x (some d dimensional vector) and y (some class label), how do we train a model to predict labels given inputs. Define a loss and calculate and expression for backpropping this loss to update weights.
     * Logistic regression is a 1 layer neural network, where we apply a linear projection, then a softmax (multi-class) or sigmoid (binary classification) in order to get a probability distribution per class. We can then use a negative log likelihood loss 
+* What is Maximum Likelihood Estimation?
+* What are ensemble models and when are they useful?
+* What is self attention, and where is the weighted sum computed in the self attention operation?
+* What is the difference between CNNs and ViTs?
+* What is a Hessian and where is it used in ML?
+* What is a Positive Definite Matrix
+* What is necessary for a square matrix to be invertible?
+* What does it mean for the covariance matrix of a multivariate gaussian to be diagonal?
+* When would you use threads vs processes?
+    * How would you pass data at the OS process level between one dataloading process and a data processing process
+* Difference in weights between L1 and L2 regularization?
+* What is the entropy of a biased coin?
+* Explain Binary Cross Entropy
 
 ### Generic ML Questions
 * Explain the Bias Variance Tradeoff
@@ -93,3 +106,6 @@ $$\DeclareMathOperator*{\argmin}{argmin}
             * Mask R-CNN - the loss function in the Mask R-CNN is a combination of the negative logprob for the true class, a bounding box loss (smooth l1 on the 4 bounding box predictions), and a mask loss, which uses a per pixel sigmoid, and then takes an average of the binary cross entropy loss across the mask pixels.
         * How could we deal with different data sources - i.e. we have data from a fish eye and a traditional camera
             * We could either consider transforming the images from one to another using some CV library, or training separate models for the different data types, since it might be difficult for a model to simultaneously learn features from both camera types. If we were to keep one model, we would want to balance out the distribution of images across the datatypes in order to make sure performance is good on both.
+* You've been given an archive of satellite photos of Cambodia, each taken a few years apart, and you want to count the number of homes in the region at each time period. You can get labels for a set of areas containing at least 10,000 homes via crowdsourcing, but there are too many photos to do a full manual count. What sort of ML pipeline would you use to automate this task.
+    * Followup: How would you store the dataset to optimize for the dataloader
+    * Followup: If while training this model, you see that the GPU utilization is at 30%, what would you do to fix it?
