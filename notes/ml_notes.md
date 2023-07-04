@@ -5,6 +5,11 @@ title: ML Notes
 A collection of notes on new ML papers that I find interesting, and a review/overview of topics I want to brush up on about or learn about.
 
 ## Topics
+<!-- * [**Video Understanding**](/notes/ml_notes/video)
+    <div style=" font-size: 11px;">Updated February 2023</div> -->
+<!-- * [**Distributed Training with PyTorch**](/notes/ml_notes/distributed)
+    <div style=" font-size: 11px;">Updated July 2023</div> -->
+
 * [**ML Fundamentals Interview Review**](/notes/ml_notes/interview_notes)
     <div style=" font-size: 11px;">Updated September 2022</div>
 
@@ -18,6 +23,9 @@ A collection of notes on new ML papers that I find interesting, and a review/ove
     <div style=" font-size: 11px;">Updated December 2022</div> -->
 
 ## Papers
+* [**Surgical Fine Tuning Improves Adaptation to Distribution Shifts**](/notes/ml_notes/surgical)
+    <div style=" font-size: 11px;">Updated July 2023</div>
+
 * [**Learning to Play Minecraft with Video PreTraining**](/notes/ml_notes/vpt)
     <div style=" font-size: 11px;">Updated September 2022</div>
 
