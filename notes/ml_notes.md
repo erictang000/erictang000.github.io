@@ -7,8 +7,8 @@ A collection of notes on new ML papers that I find interesting, and a review/ove
 ## Topics
 <!-- * [**Video Understanding**](/notes/ml_notes/video)
     <div style=" font-size: 11px;">Updated February 2023</div> -->
-* [**Distributed Training with PyTorch**](/notes/ml_notes/distributed)
-    <div style=" font-size: 11px;">Updated July 2023</div>
+<!-- * [**Distributed Training with PyTorch**](/notes/ml_notes/distributed)
+    <div style=" font-size: 11px;">Updated July 2023</div> -->
 
 * [**ML Fundamentals Interview Review**](/notes/ml_notes/interview_notes)
     <div style=" font-size: 11px;">Updated September 2022</div>
