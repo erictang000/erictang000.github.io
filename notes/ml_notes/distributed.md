@@ -3,11 +3,9 @@ layout: post
 title: Distributed Training in PyTorch
 ---
 ## PyTorch Lightning - DDP
-
 ### Single-Node Multi-GPU
-
-### Common Pitfalls to watch out for
-
+DDP should be the default way to conduct distributed training in PyTorch - using distributed paral
+### Multiple-Node Multi-GPU
 
 ## PyTorch Distributed
 ### Single-Node Multi-GPU
