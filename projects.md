@@ -16,6 +16,9 @@ title: Projects
   }
 </style>
 
+### **Group-DRO for Automatic Speech Recognition** <a href="https://github.com/erictang000/groupdro-asr"><i class="fab fa-github"></i></a> <a href="../images/CS_224S_Final_Project.pdf"><i class="fas fa-file"></i></a>
+Improved the robustness of automatic speech recognition models on the ML-SUPERB benchmark by applying Group-DRO. Via experiments on the Bantu family of languages, and on English audio across various ML-SUPERB datasets, we showed that Group-DRO can help improve worst case performance across challenging group shifts while maintaining high average performance across the test set. 
+
 ### **Do Objectives Matter OOD? Understanding the Impact of Self-Supervised Objectives on Robustness of Vision Transformers** <a href="https://github.com/erictang000/wilds"><i class="fab fa-github"></i></a> <a href="../images/CS_329D_Project.pdf"><i class="fas fa-file"></i></a>
 Investigated the effect of self supervised pretraining objectives (Contrastive Learning vs Masked Image Modelling) on the robustness of Vision Transformer representations to distribution shift. Found that linear probing over CL pretrained ViTs show the strongest OOD robustness for image classification due to the stronger out of the box classification performance and lack of overfitting to in-distribution training data that can be found during fine tuning.
 
