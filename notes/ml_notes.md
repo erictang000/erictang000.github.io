@@ -10,8 +10,8 @@ A collection of notes on new ML papers that I find interesting, and a review/ove
 <!-- * [**Distributed Training with PyTorch**](/notes/ml_notes/distributed)
     <div style=" font-size: 11px;">Updated July 2023</div> -->
 
-* [**ML Fundamentals Interview Review**](/notes/ml_notes/interview_notes)
-    <div style=" font-size: 11px;">Updated September 2022</div>
+<!-- * [**ML Fundamentals Interview Review**](/notes/ml_notes/interview_notes)
+    <div style=" font-size: 11px;">Updated September 2022</div> -->
 
 * [**Optimizers**](/notes/ml_notes/optimizers)
     <div style=" font-size: 11px;">Updated January 2022</div>
